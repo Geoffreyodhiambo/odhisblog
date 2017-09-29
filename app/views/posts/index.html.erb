@@ -1,0 +1,10 @@
+<h1 class="home">THE WORLD AND ITS(D)MERITS</h1>
+<% @posts.each do |post| %>
+    <div class="white"
+	   <h3><%= post.title %></h3>
+	   <p><%= post.body %></p>
+	   <%= image_tag post.image.url(:medium) %>
+
+	   <%= link_to "read more", post_path(post), :class => 'btn btn-default' %>
+	</div>
+<% end %>s

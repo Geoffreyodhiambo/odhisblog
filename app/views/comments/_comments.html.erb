@@ -1,0 +1,11 @@
+<h3>comments</h3>
+<% @post.comments.each do |comment| %>
+    <div class="well">
+    <p><strong><%= comment.username %></strong>: <%= comment.body %>
+    <%= link_to '[x]', [comment.post, comment],
+                method: :delete,
+                data:{confirm: 'Are you sure?'},
+                 :class =>'btn btn-default' %>
+    </p>
+    </div>
+ <% end %>
